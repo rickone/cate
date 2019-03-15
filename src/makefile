@@ -1,13 +1,14 @@
 Package =
-Target  = libcate.so
-Source  = $(wildcard *.cpp *.c)
-Lib     = asyn
+TargetType = so
+#Test = 1
+Source = $(wildcard *.cpp)
+Import = asyn
 ExportHeader =
 Include =
-Define  =
-CFLAGS  =
+Define =
+CFLAGS =
 CXXFLAGS = -std=c++14
 LDFLAGS =
 Rpath =
 
-include /usr/local/etc/cmk
+include $(CPKG_PATH)/cmk
